@@ -3,11 +3,11 @@ Esta es una máquina catalogada como fácil en dockerlabs. Lo primero que debemo
 sudo bash auto_deploy.sh los40ladrones.tar
 ```
 Luego de esto le hacemos un escaneo con nmap. 
-![[primera]](los40ladrones1.png)
+![[primera]](los40ladrones.png)
 Aquí podemos ver que esta abierto el puerto 80. Por lo que haremos una enumeración dominios con gobuster. que sinceramente en su inicio no logre encontrar nada ya que utilice, una búsqueda con diccionario que no encontró nada pero posteriormente vi un write up y vi que habían archivos txt en la web por lo que decidí añadirlo en la búsqueda de gobuster y encontré dicho archivo.
-![[Segunda]](los40ladrones2.png)
+![[Segunda]](los40ladrones1.png)
 Una vez ingresamos a este archivo encontramos algunas pistas como la posible existencia de un usuario llamado toctoc y tenemos algunos números que pueden especificar puertos o algo más. 
-![[Tercera]](los40ladrones3.png)
+![[Tercera]](los40ladrones2.png)
 Viendo en otros Writes Ups me di cuenta que la posible manera de utilizar estos números ya que al revisarlo con el comando:
 ```
 nmap --top-ports 25T -n 172.17.0.2
